@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:http/http.dart';
-import 'package:flutter_web_nytimes_api/models/article_model.dart';
+import 'package:http/http.dart' as http;
+import 'package:flutter_web_news_reader/models/article_model.dart';
 
 class APIService {
   final String _baseUrl = 'api.nytimes.com';
@@ -12,7 +12,7 @@ class APIService {
     };
     Uri uri = Uri.https(
       _baseUrl,
-      '/svs/topstories/v2/$section.json',
+      '/svc/topstories/v2/$section.json',
       parameters,
     );
     try {
